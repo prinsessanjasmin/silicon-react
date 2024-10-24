@@ -1,0 +1,110 @@
+/* Following collapsible buttons are made with help from W3 Schools tutorial */
+
+//The pseudo elements and classes are results of some help from ChatGPT
+
+.collapse-faq {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+
+    .faq {
+        display: flex;
+        flex-direction: column;
+
+        .collapsible {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            padding: 0 1rem;
+            width: 100%;
+            border: .2px solid var(--clr-gray-300);
+            border-radius: 6px;
+            background-color: var(--clr-background);
+            text-align: left;
+            outline: none;
+            position: relative;
+            
+            p {
+                font-family: "Manrope", sans-serif;
+                font-weight: 700;
+                font-size: 1rem;
+                color: var(--clr-text-body);
+            }
+            
+            .collapse-down {
+                background-color: var(--clr-gray-100);
+                margin: 1rem;
+                margin-right: 0;
+                
+                &::after {
+                    color: var(--clr-text-body);
+                }
+
+                &:hover {
+                    background-color: var(--clr-primary);
+                }
+
+                &:hover::after {
+                    color: var(--clr-white);
+                }
+            }
+        }
+       
+        .content {
+            padding: 8px 18px;
+            display: flex;
+            flex-direction: column;
+            color: var(--clr-gray-700);
+            background-color: var(--clr-background);
+            border: .2px solid var(--clr-gray-300);
+            border-radius: 6px;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            max-height: 0;
+            opacity: 0;
+            transition: max-height 0.3s ease, opacity 0.3s ease;
+            overflow: hidden;
+
+            //Had ChatGPT help with creating the transition from collapsed to open view.
+            
+            p {
+                padding-bottom: 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    .faq-open {
+        .collapsible {
+            border-bottom: none;
+
+            .collapse-down {
+                background-color: var(--clr-primary);
+                box-shadow: 0 4px 6px 0 rgba(11, 15, 25, 0.15);
+        
+                &::after {
+                    color: var(--clr-white);
+                    transform: translateY(-50%) rotate(180deg); 
+                } 
+
+                &:hover {
+                    background-color: var(--clr-gray-500);
+                }
+
+                &:hover::after {
+                    color: var(--clr-gray-900);
+                }
+            }
+        }
+        
+        .content {
+            max-height: 400px;
+            opacity: 1;
+            margin-bottom: 1rem;
+        }
+    }
+}
+

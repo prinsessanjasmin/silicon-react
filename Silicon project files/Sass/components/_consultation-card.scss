@@ -1,0 +1,80 @@
+.consultation-card {
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: 0 4px 4px 0 rgba(11, 15, 25, 0.25);
+    border: none;
+    background-color: var(--clr-background);
+    top: 4rem;
+    right: 5rem;
+
+    @include respond-to('medium') {
+        width: 40vw;
+        height: 50vh;
+        padding: 2rem;
+    }
+    @include respond-to('large') {
+        width: 40vw;
+        height: 75vh;
+        padding: 4rem;
+    }
+
+    .contact-form {
+        .input-group {
+            margin-block: 1.5rem;
+            display: flex; 
+            flex-direction: column;
+            gap: .5rem;
+    
+            label {
+                font-size: 1rem;
+                font-weight: 600;
+                color: var(--clr-text-headlines);
+            }
+    
+            input {
+                font-size: inherit;
+                font-family: inherit;
+                padding: .5rem;
+                border-radius: .5rem;
+                border: 1px solid var(--clr-gray-400);
+
+                &:hover,
+                &:active {
+                    border: none;
+                    box-shadow: 0 4px 4px 0 rgba(11, 15, 25, 0.25);
+                }
+            }
+        }
+
+        select {
+            appearance: none;
+            -webkit-appearance: none; /* Safari */
+            -moz-appearance: none; /* Firefox */
+            font-size: inherit;
+            font-family: inherit;
+            padding: .5rem;
+            border-radius: .5rem;
+            border: 1px solid var(--clr-gray-400);
+
+            
+            background-image: url("/Icons/chevron-down-silicon.svg");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 1.5rem;
+            
+
+            &:hover,
+            &:active {
+                border: none;
+                box-shadow: 0 4px 4px 0 rgba(11, 15, 25, 0.25);
+            }
+        }
+
+        .button {
+            margin-block: 2rem;
+            width: 100%;
+        }
+    }
+
+    
+}

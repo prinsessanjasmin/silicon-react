@@ -1,0 +1,128 @@
+nav {
+    background-color: var(--clr-background);
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+.under-page-nav {
+    background-color: var(--clr-background-gray);
+}
+
+.header-container {  
+    padding: .5rem 1rem .2rem .5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+#silicon-logo {
+    width: 100%;
+    
+    #s-text {
+        display: inline-block;
+        vertical-align: middle;
+        text-decoration: none;
+    }
+    
+    #s-logo {
+        display: inline-block;
+        vertical-align: middle; 
+        margin-right: 0.5rem;
+    }
+
+    @include respond-to('medium') {
+        width: 30%;
+    }
+
+    @include respond-to('large') {
+        width: 15%;
+        margin-right: 2rem;
+    }     
+}
+
+.nav-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    .nav-list-item {
+        list-style: none;
+    }
+
+    #toggle-switch-li {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    
+        @include respond-to('medium') {
+            .toggle-switch-label {
+                display: inline;
+                padding-right: 1rem;
+            }
+        }
+    }
+
+    #hamburger-li {
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+
+    @include respond-to('medium') {
+        grid-template-columns: 2fr 2fr 1fr;
+        justify-items: right;
+    }
+
+    @include respond-to('large') { 
+        grid-template-columns: 1fr 6fr 2fr 2fr;
+        align-items: center;
+        gap: 2rem;
+
+        #hamburger-li {
+            display: none;
+        }
+
+        #feature-menu-li {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            justify-self: left;
+        }
+
+        #contact-li {
+            grid-column: 2/3;
+            grid-row: 1/2;
+            justify-self: left;          
+        }
+
+        #toggle-switch-li {
+            grid-column: 3/4;
+            grid-row: 1/2;
+        }
+
+        #signin-btn-li {
+            grid-column: 4/5;
+            grid-row: 1/2;
+        }
+    }
+}
+
+#feature-menu, 
+#contact {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--clr-text-body);
+    text-decoration: none;
+    cursor: pointer;
+    display: none;
+
+    &:hover {
+        color: var(--clr-primary);
+    }
+
+    @include respond-to('large') {
+        display: inline;
+        
+    }
+}
+

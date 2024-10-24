@@ -1,0 +1,21 @@
+.google-map {
+    padding-bottom: 80%;
+    position: relative;
+    height: 0;
+    border: none;
+    overflow: hidden; 
+    border-radius: .5rem;
+
+    @include respond-to('large') {
+        width: 40%;
+        padding-bottom: 45%;
+    }
+
+    iframe {
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+    }
+}

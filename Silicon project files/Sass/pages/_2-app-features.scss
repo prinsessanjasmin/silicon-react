@@ -1,0 +1,114 @@
+#page-2 {
+    margin: 2rem 0; 
+}
+
+#p-2 {
+    @include respond-to('large') {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 5rem;
+        margin: auto;
+        margin-block: 6rem;
+    }
+
+    @include respond-to('x-large') {
+        gap: 10rem;
+    }
+}
+    
+#side-view {
+    display: none;
+
+    @include respond-to('large') {
+        display: block;
+        flex: 1;
+        height: auto; 
+        align-self: flex-end;
+        
+        #side-phone {
+            object-fit: contain;
+            width: 100%;
+        }
+    }
+
+    @include respond-to('x-large') {
+        flex: 2;
+    }
+}
+
+#text-content {
+    @include respond-to('large') {
+        display: block;
+        flex: 2;
+        justify-content: end;
+        margin: 0;
+        padding: 0;
+    }
+
+    @include respond-to('x-large') {
+        flex: 5;
+    }
+
+    .textpage {
+        margin-bottom: 2rem;
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center; 
+
+        @include respond-to('large') {
+            margin-bottom: 2rem;
+
+            #app-features {
+                align-self: start;
+                font-size: 2.5rem;
+            }
+
+            p {
+                text-align: left;
+                font-size: 1.1rem;
+                color: var(--clr-text-body-600)
+            }  
+        }
+    }
+}
+
+.app-feature-container {
+    display: flex;
+    flex-direction: column;
+
+    @include respond-to('medium') {
+        max-width: 720px;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include respond-to('large') {
+        gap: 2rem;
+    }
+}
+
+.app-feature-li {
+    list-style: none;
+    display: inline-flex;
+    padding: .5rem;
+    align-items: flex-start;
+    gap: 1em;
+    
+    .icon-holder {
+        height: 60px;
+        width: 60px;
+        display: inline-block;
+    }
+    
+    img {
+        object-fit: contain;
+    }
+    
+    p {
+        padding: 8px 0;
+    }
+}

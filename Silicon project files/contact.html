@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Sass/main-sass.css">
+    <script src="https://kit.fontawesome.com/584828937d.js" crossorigin="anonymous"></script>
+    <title>Contact us</title>
+</head>
+<body>
+    <div id="wrapper">
+        <nav aria-label="main-navigation" class="main-navigation under-page-nav">
+            <div class="header-container container">
+                <div id="silicon-logo">
+                    <a id="s-logo" href="index.html">
+                        <img src="/Logos/Silicon.svg" alt="Silicon logotype">
+                    </a>
+                    <a id="s-text" href="index.html">
+                        <h5>Silicon</h5>
+                    </a>
+                </div>
+                <ul class="nav-list">
+                    <li class="nav-list-item nav-link" id="feature-menu-li">
+                        <a href="#" id="feature-menu">Features</a>
+                    </li>
+                    <li class="nav-list-item nav-link" id="contact-li">
+                        <a href="/contact.html" id="contact">Contact</a>
+                    </li>
+                    <li class="nav-list-item" id="toggle-switch-li">
+                        <div class="toggle-switch-button">
+                            <span class="toggle-switch-label">Dark Mode</span>
+                            <label class="switch">
+                                <input type="checkbox" id="dm-switch" aria-label="darkmode switch">
+                                <span class="slider round"></span>
+                            </label> 
+                            <!-- ovan kopierat från w3schools -->
+                        </div>
+                    </li>
+                    <li class="nav-list-item" id="signin-btn-li">
+                        <a href="#" class="button" id="signin-button">
+                            <i class="fa-regular fa-user"></i>
+                            <span>Sign in / up</span>
+                        </a> 
+                    </li>
+                    <li class="nav-list-item" id="hamburger-li">
+                        <button class="hamburger-menu" aria-label="click for full menu" >
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <section id="contact-page-1" aria-label="contact-page">
+                <div class="container" id="p-contact-1">
+                    <div class="page-nav">
+                        <a href="/index.html">
+                            <span>
+                                <i class="fa-solid fa-house"></i>
+                            </span>
+                            <span>Homepage</span>
+                        </a>
+                        <span><i class="fa-solid fa-angles-right"></i></span>
+                        <a class="active" href="/contact.html">
+                            <span>Contact</span>
+                        </a>
+                    </div>
+                    <div class="contact-us">
+                        <h1>Contact Us</h1>
+                        <div class="contact-info-div" id="contact-info">
+                            <div class="contact-option">
+                                <div class="icon-holder">
+                                    <img src="/Icons/envelope.svg" alt="Envelope icon">
+                                </div>
+                                <div class="contact-group">
+                                    <h4>Email us</h3>
+                                    <p>Please feel free to drop us a line. We will respond as soon as possible.</p>
+                                    <a href="#" type="button" aria-label="Click to send us an email">Leave a message &rarr;</a>
+                                </div>
+                            </div>
+                            <div class="contact-option">
+                                <div class="icon-holder">
+                                    <img src="/Icons/add-group.svg" alt="Icon of people connecting">
+                                </div>
+                                <div class="contact-group">
+                                    <h4>Careers</h3>
+                                    <p>Sit ac ipsum leo lorem magna nunc mattis maecenas non vestibulum.</p>
+                                    <a href="#" type="button" aria-label="Click to send us an application">Send an application &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="consultation-card" id="consultation-card">
+                        <h3>Get Online Consultation</h2>
+                        <form class="contact-form">
+                            <div class="input-group">
+                                <label for="full-name">Full name</label>
+                                <input type="text" id="full-name">
+                            </div>
+                            <div class="input-group">
+                                <label for="email-adress">Email adress</label>
+                                <input type="text" id="email-adress">
+                            </div>
+                            <div class="input-group">
+                                <label for="specialist">Specialist</label>
+                                <select id="specialist">
+                                    <option value="">Select a speciality...</option>
+                                    <option value="accounting">Accounting</option>
+                                    <option value="web-programming">Web programming</option>
+                                    <option value="back-end">Back-end</option>
+                                    <option value="web-design">Web design</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <button class="button" type="submit">Make an appointment</button>
+                        </form>
+                    </div>
+                </div>
+
+                
+                
+            </section>
+            <section id="contact-page-2" aria-label="contact-page-with-map">
+                <div class="container" id="p-contact-2">
+                    <div class="google-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12621.335361536538!2d-122.40866839022975!3d37.73531158510237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sse!4v1729170961143!5m2!1sen!2sse" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="location-box">
+                        <div class="location" id="location-1">
+                            <h4>Medical Center 1</h4>
+                            <div class="icon-text">
+                                <img src="/Icons/map-pin.svg" alt="Map pin icon" class="small-icon">
+                                <span>4517 Washington Ave. Manchester, Kentucky 39495</span>
+                            </div>
+                            <div class="icon-text">
+                                <img src="/Icons/Phonecall.svg" alt="Phonecall icon" class="small-icon">
+                                <span>(406) 555-0120</span>
+                            </div>
+                            <div class="icon-text">
+                                <img src="/Icons/bx-time-five.svg" alt="Clock icon" class="small-icon">
+                                <span><b>Mon - Fri:</b> 9:00 am - 22:00 am <br>
+                                    <b>Sat - Sun:</b> 9:00 am - 20:00 am</span>
+                            </div>
+                        </div>
+                        <div class="location" id="location-2">
+                            <h4>Medical Center 2</h4>
+                            <div class="icon-text">
+                                <img src="/Icons/map-pin.svg" alt="Map pin icon" class="small-icon">
+                                <span>2464 Royal Ln. Mesa, New Jersey 45463</span>
+                            </div>
+                            <div class="icon-text">
+                                <img src="/Icons/Phonecall.svg" alt="Phonecall icon" class="small-icon">
+                                <span>(406) 544-0123</span>
+                            </div>
+                            <div class="icon-text">
+                                <img src="/Icons/bx-time-five.svg" alt="Clock icon" class="small-icon">
+                                <span><b>Mon - Fri:</b> 9:00 am - 22:00 am <br>
+                                <b>Sat - Sun:</b> 9:00 am - 20:00 am</span>
+                            </div> 
+                        </div>
+                        <div class="social-logos">
+                            <img src="/Icons/fb.svg" alt="Facebook logo" class="social-light">
+                            <img src="/Icons/fb-dark.svg" alt="Facebook logo" class="social-dark">
+                            <img src="/Icons/tw.svg" alt="Twitter logo" class="social-light">
+                            <img src="/Icons/tw-dark.svg" alt="Twitter logo" class="social-dark">
+                            <img src="/Icons/ig.svg" alt="Instagram logo" class="social-light">
+                            <img src="/Icons/ig-dark.svg" alt="Instagram logo" class="social-dark">
+                            <img src="/Icons/yt.svg" alt="Youtube logo" class="social-light">
+                            <img src="/Icons/yt-dark.svg" alt="Youtube logo" class="social-dark">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-class container">
+                <span class="footer">© 2024 Silicon. All rights reserved.</span>
+                <span class="footer">Credit MadrasThemes</span>
+            </div>
+        </footer>
+    </div>
+    <script src="/JavaScript/script.js"></script> 
+</body>
+</html>

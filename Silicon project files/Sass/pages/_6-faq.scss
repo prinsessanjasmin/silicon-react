@@ -1,0 +1,67 @@
+#p-6 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    @include respond-to('medium') {
+        margin-top: 4rem;
+        gap: 2rem;
+    }
+
+    @include respond-to('large') {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        display: grid;
+        grid-template-columns: 4fr 5fr;
+        grid-template-rows: 2fr 2fr 2fr;
+        gap: 4rem;
+        
+        .text-item {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+
+        #contact-container  {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+
+        .collapse-faq {
+            grid-column: 2/3;
+            grid-row: 1/4;
+        }
+    }
+
+    .text-item {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        margin-top: 3rem;
+        text-align: center;
+
+        @include respond-to('medium') {
+            width: 50vw; 
+            margin: auto;
+
+            h3 {
+                font-size: 2rem;
+            }
+        }
+
+        @include respond-to('large') {
+            width: auto; 
+            margin: auto;
+            justify-content: center;
+            
+            h3 {
+                font-size: 2rem;
+                text-align: left;
+            }
+
+            p {
+                text-align: left;
+            }
+        }
+    }
+}

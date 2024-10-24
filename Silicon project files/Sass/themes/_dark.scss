@@ -1,0 +1,117 @@
+.darkmode {
+    --clr-background: var(--clr-gray-900);
+    --clr-background-gray: var(--clr-gray-890);
+
+    --clr-text-headlines: var(--clr-white);
+    --clr-text-body: var(--clr-gray-500);
+    --clr-text-body-600: var(--white);
+
+    
+    .download-button {
+        background-color: #EFF2FC;
+
+        .btn-pic-dark {
+            display: block;
+        }
+    
+        #apple-pic {
+            display: none;
+        }
+        
+        #google-pic {
+            display: none;
+        }
+    }  
+
+    #p-6 {
+        .collapsible {
+            border: .05px solid var(--clr-gray-800);
+            p {
+                color: var(--clr-white);
+            }
+        }
+        
+        .content {
+            border: .05px solid var(--clr-gray-800);
+        }
+
+        .collapse-down {
+            background-color: var(--clr-gray-880);
+            
+            &::after {
+                color: var(--clr-white);
+            }
+
+            &:hover {
+                background-color: var(--clr-primary);
+            }
+
+            &:hover::after {
+                color: var(--clr-white);
+            }
+        }
+
+        .faq-open {
+            .collapsible {
+                .collapse-down {
+                    background-color: var(--clr-primary);
+                    box-shadow: 0 4px 6px 0 rgba(11, 15, 25, 0.15);
+            
+                    &::after {
+                        color: var(--clr-white);
+                        transform: translateY(-50%) rotate(180deg); 
+                        transform-origin: 0.25rem;
+                    } 
+
+                    &:hover {
+                        background-color: var(--clr-gray-500);
+                    }
+
+                    &:hover::after {
+                        color: var(--clr-gray-900);
+                    }
+                }
+            }
+            
+        }
+    }
+
+    .consultation-card {
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.534);
+    }    
+
+    #p-contact-2 {
+        .location-box {
+            .social-light {
+                display: none;
+            }
+        
+            .social-dark {
+                display: block; 
+            } 
+        }
+    }
+
+    @include respond-to('medium') {
+        #teaser {
+            color: var(--clr-text-body-600);
+        }
+
+        #logo-section .logo-holder {
+            border: .5px solid var(--clr-gray-800);
+            
+        }   
+    }
+
+    @include respond-to('large') {   
+        #page-5 {
+            #p-5 {
+                .text-box {
+                    background-color: var(--clr-gray-880);
+                }
+            }  
+        }
+    }
+}
+
+

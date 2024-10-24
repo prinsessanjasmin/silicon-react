@@ -1,0 +1,35 @@
+@mixin respond-to($size) {
+    $breakpoint: map-get($breakpoints, $size); // Get the value from the map
+    @media (min-width: $breakpoint) {
+      @content;
+    }
+}
+
+@mixin font-awesome-icon($icon-unicode) {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: $icon-unicode;
+}
+
+@mixin button {
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
+  border: none; 
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+@mixin round-button {
+  width: 3rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+@mixin text {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  background-color: var(--clr-background);
+  color: var(--clr-text-body);
+}

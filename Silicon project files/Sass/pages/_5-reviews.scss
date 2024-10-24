@@ -1,0 +1,30 @@
+#page-5 {
+    display: none;
+    
+    @include respond-to('large') { 
+        display: block;
+        background-color: var(--clr-background-gray);
+    }
+
+    #p-5 {
+        @include respond-to('large') {
+            display: flex;
+            gap: 2rem;
+            justify-content: space-evenly;
+            padding: 4rem 1rem;
+
+            #p-5-text {
+                flex: 1;
+                h2 {
+                    text-align: left;
+                    font-size: 2rem;
+                    padding-right: 2rem;
+                }  
+            }
+
+            .review-card {
+                flex: 1;
+            }
+        }
+    }
+}

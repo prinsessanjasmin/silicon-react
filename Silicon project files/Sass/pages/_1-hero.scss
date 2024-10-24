@@ -1,0 +1,173 @@
+#page-1 {
+    background-color: var(--clr-background);
+    background-image: var(--clr-gradient);
+}
+
+#p-1 {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;  
+
+    @include respond-to('medium') {
+        display: grid;
+        grid-template-columns: 2fr 2fr 6fr;
+        grid-template-rows: auto 1fr 3fr 2fr 2fr;
+        justify-content: space-evenly;
+
+        #headline {
+            grid-column: 1/4;
+            grid-row: 1/2;
+        }
+
+        #teaser {
+            grid-column: 1/3; 
+            grid-row: 3/4;
+        }
+
+        #discover {
+            grid-column: 1/3;
+            grid-row: 5/6;
+        }
+
+        #apple {
+            grid-column: 1/2;
+            grid-row: 4/5;
+        }
+
+        #google {
+            grid-column: 2/3;
+            grid-row: 4/5;
+        }
+
+        #img-co-1 {
+            grid-column: 3/4;
+            grid-row: 2/6;
+        }
+    }
+
+    @include respond-to('large') {
+        grid-template-columns: 1fr 1fr 1fr 5fr;
+        grid-template-rows: auto 1fr 1fr 2fr;
+
+        #headline {
+            grid-column: 1/4;   
+            grid-row: 1/2;
+        }
+
+        #teaser {
+            grid-column: 1/4; 
+            grid-row: 2/3;
+        }
+
+        #discover {
+            grid-column: 1/4;
+            grid-row: 4/5;
+        }
+
+        #apple {
+            grid-column: 1 / 2;
+            grid-row: 3/4;
+            align-self: start;
+        }
+    
+        #google {
+            grid-column: 2 / 3;
+            grid-row: 3/4;
+            align-self: start;
+        }
+        
+        #img-co-1 {
+            grid-column: 4/5; 
+            grid-row: 1/5;
+            justify-self: flex-end;
+            align-self: flex-end;
+        }
+    }
+}
+
+
+
+#headline {
+    margin: 1rem;
+    font-size: 2.2rem;
+    font-weight: 800;
+    text-align: center;
+
+    @include respond-to('medium') {
+        font-size: 2.75rem;
+    }
+
+    @include respond-to('large') {
+        font-size: 3.2rem;
+        text-align: left;
+        margin-top: 5rem;
+        margin-left: 0;
+    }
+}
+
+#teaser {
+    margin: 1rem;
+    width: 90%;
+    font-size: 1.1rem;
+    color: var(--clr-text-headlines);
+    text-align: center;
+
+    @include respond-to('medium') {
+        width: auto;
+        text-align: left;
+        margin: 0;
+    }
+
+    @include respond-to('large') {
+        align-self: flex-start;
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+}
+
+
+#discover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond-to('medium') {
+        justify-self: left;
+    }
+
+    #discover-more {
+        font-size: .9rem;
+        color: var(--clr-text-body-600);
+    }
+}
+
+
+
+#img-co-1 {
+    display: none;
+
+    @include respond-to('medium') {
+        display: block;
+        width: 100%;
+        align-self: flex-end;
+        justify-self: start;
+
+        #ip-1 {
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            object-fit: contain;  
+        }
+    }
+
+    @include respond-to('large') {
+        width: 100%;
+    }
+
+    @include respond-to('x-large') {
+        width: 85%;
+    }
+}
+
