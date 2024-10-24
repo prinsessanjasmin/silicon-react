@@ -1,11 +1,10 @@
+//COLLAPSIBLE/ACCORDION: I had help from ChatGPT with this event listener, specifically the loop
+
 const collapseDown = document.getElementsByClassName('collapse-down'); 
 const collapsible = document.getElementsByClassName('collapsible');
 const faq = document.getElementsByClassName('faq');
 
-const darkmodeSwitch = document.getElementById('dm-switch'); 
-const hasSetDarkmode = localStorage.getItem('darkmode');
 
-//I had help from ChatGPT with this event listener, specifically the loop
 for (let i = 0; i < collapsible.length; i++) {
     collapsible[i].addEventListener('click', function() {
         const faq = this.parentElement; // Access the parent element (the div with the class 'faq')
@@ -17,6 +16,19 @@ for (let i = 0; i < collapsible.length; i++) {
         }
     });
 }
+
+function addOpenClass(faq) {
+    faq.classList.add('faq-open');
+}
+
+function removeOpenClass(faq) {
+    faq.classList.remove('faq-open')
+}
+
+
+//DARKMODE
+const darkmodeSwitch = document.getElementById('dm-switch'); 
+const hasSetDarkmode = localStorage.getItem('darkmode');
 
 if(hasSetDarkmode == null) {
     if(window.matchMedia('prefers-color-scheme: dark)').matches) {
@@ -41,13 +53,7 @@ darkmodeSwitch.addEventListener('change', () => {
     }
 })
 
-function addOpenClass(faq) {
-    faq.classList.add('faq-open');
-}
 
-function removeOpenClass(faq) {
-    faq.classList.remove('faq-open')
-}
 
 function enableDarkmode() {
     darkmodeSwitch.checked = true;
