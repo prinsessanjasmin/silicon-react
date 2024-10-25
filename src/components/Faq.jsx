@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-function Faq(props) {
+function Faq({ id, title, content }) {
 
   const [clicked, setClicked] = useState(false)
     
@@ -10,12 +10,12 @@ function Faq(props) {
 
   return (
     <div className={`faq ${clicked ? 'faq-open' : ''}`} id="">
-        <div type="button" onClick={handleClick} className="collapsible">
-            <p>{ props.question }</p>
+        <div type="button" onClick={handleClick} className="collapsible" id={id}>
+            <p>{ title }</p>
             <button className="down-btn collapse-down" aria-label="Read the answer" ></button>
         </div>
         <div className={`content ${clicked ? 'open' : 'collapsed'}`} id="">
-            <p>{ props.answer }</p>
+            <p>{ content }</p>
         </div>
     </div>
   )

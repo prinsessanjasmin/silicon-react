@@ -6,7 +6,7 @@ function Subscribe() {
         <div className="container" id="subscribe-container">
             <div id="bell-sub">
                 <div className="image-container" id="bell-container">
-                    <img src="src\components\Icons\bell.svg" alt="Notification bell icon."></img>
+                    <img src="src/assets/Icons/bell.svg" alt="Notification bell icon."></img>
                 </div>
                     <h4 id="subscribe-text">Subscribe to our newsletter<span> to stay informed about our latest updates</span></h4>
             </div>

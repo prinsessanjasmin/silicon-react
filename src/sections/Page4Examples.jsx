@@ -25,31 +25,31 @@ function Page4Examples() {
                     </div>
                     <div className="image-container" id="p4-img-1">
                         <div id="scr-1">
-                            <img loading="lazy" src="src\components\Images\Screenshot1.svg" alt="Screenshot of diagram."></img>
+                            <img loading="lazy" src="src/assets/Images/Screenshot1.svg" alt="Screenshot of diagram."></img>
                         </div>
                         <div id="scr-2">
-                            <img loading="lazy" src="src\components\Images\Screenshot2.svg" alt="Screenshot of contacts."></img>
+                            <img loading="lazy" src="src/assets/Images/Screenshot2.svg" alt="Screenshot of contacts."></img>
                         </div>
                     </div>
                 </div>
                 <div className="p4-flex">
                     <div className="image-container" id="p4-img-2">
                         <div id="scr-3">
-                            <img loading="lazy" src="src\components\Images\Screenshot3.svg" alt="Screen shot of contacts."></img>
+                            <img loading="lazy" src="src/assets/Images/Screenshot3.svg" alt="Screen shot of contacts."></img>
                         </div>
                         <div id="scr-visa">
-                            <img loading="lazy" src="src\components\Images\Visacard1.svg" alt="A credit card."></img>
+                            <img loading="lazy" src="src/assets/Images/Visacard1.svg" alt="A credit card."></img>
                         </div>
                     </div>
                     <div className="p4-text">
                         <h2>Receive payment from international bank details</h2>
                         <ul className="p4-ul-2">
                             <li className="p4-li-2">
-                                <img src="src\components\Icons\Card.svg" alt="Credit card icon."></img>
+                                <img src="src/assets/Icons/Card.svg" alt="Credit card icon."></img>
                                 <p>Manage your payments online. Mollis congue egestas egestas fermentum fames.</p>
                             </li>
                             <li className="p4-li-2">
-                                <img src="src\components\Icons\Wallet.svg" alt="Wallet icon."></img>
+                                <img src="src/assets/Icons/Wallet.svg" alt="Wallet icon."></img>
                                 <p>A elementur and imperdiet enim, pretium etiam facilisi aenean quam mauris.</p>
                             </li>
                         </ul>

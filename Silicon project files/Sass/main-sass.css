@@ -239,12 +239,12 @@ nav {
 #silicon-logo {
   width: 100%;
 }
-#silicon-logo #s-text {
+#silicon-logo h5 {
   display: inline-block;
   vertical-align: middle;
   text-decoration: none;
 }
-#silicon-logo #s-logo {
+#silicon-logo img {
   display: inline-block;
   vertical-align: middle;
   margin-right: 0.5rem;

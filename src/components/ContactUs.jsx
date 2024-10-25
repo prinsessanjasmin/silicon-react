@@ -7,7 +7,7 @@ function ContactUs() {
         <div className="contact-info-div" id="contact-info">
             <div className="contact-option">
                 <div className="icon-holder">
-                    <img src="src\components\Icons\envelope.svg" alt="Envelope icon"></img>
+                    <img src="src/assets/Icons/envelope.svg" alt="Envelope icon"></img>
                 </div>
                 <div className="contact-group">
                     <h4>Email us</h4>
@@ -17,7 +17,7 @@ function ContactUs() {
             </div>
             <div className="contact-option">
                 <div className="icon-holder">
-                    <img src="src\components\Icons\add-group.svg" alt="Icon of people connecting"></img>
+                    <img src="src/assets/Icons/add-group.svg" alt="Icon of people connecting"></img>
                 </div>
                 <div className="contact-group">
                     <h4>Careers</h4>

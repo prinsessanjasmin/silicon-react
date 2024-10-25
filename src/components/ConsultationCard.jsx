@@ -6,15 +6,15 @@ function ConsultationCard() {
         <h3>Get Online Consultation</h3>
         <form className="contact-form">
             <div className="input-group">
-                <label for="full-name">Full name</label>
+                <label htmlFor="full-name">Full name</label>
                 <input type="text" id="full-name"></input>
             </div>
             <div className="input-group">
-                <label for="email-adress">Email adress</label>
+                <label htmlFor="email-adress">Email adress</label>
                 <input type="text" id="email-adress"></input>
             </div>
             <div className="input-group">
-                <label for="specialist">Specialist</label>
+                <label htmlFor="specialist">Specialist</label>
                 <select id="specialist">
                     <option value="">Select a speciality...</option>
                     <option value="accounting">Accounting</option>
