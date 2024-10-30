@@ -6,7 +6,7 @@
     gap: 0;    
 }
 
-#email-input {
+#email {
     height: 50px;
     width: 230px;
     border: 1px solid var(--clr-gray-400);
@@ -16,6 +16,7 @@
     background-color: var(--clr-white);
     font-size: inherit;
     padding: 0 1rem;
+    position: relative;
 
     @include respond-to('medium') {
         width: 215px;  
@@ -26,7 +27,7 @@
     }
 }
 
-#email-input::placeholder {
+#email::placeholder {
     @include text;
     font-size: 1rem;
     color: var(--clr-gray-500);

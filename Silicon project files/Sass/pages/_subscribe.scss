@@ -1,6 +1,7 @@
 #subscribe-container {
     background-color: var(--clr-background-gray);
     padding: 2rem 1rem;
+    padding-bottom: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,7 +29,7 @@
     }
 }
 
-#bell-sub {
+.bell-sub {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -52,4 +53,5 @@
         }
     }
 }
+
 

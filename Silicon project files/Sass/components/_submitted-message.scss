@@ -1,0 +1,21 @@
+#consultation-card.submitted-message {
+    display: flex; 
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem; 
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    @include respond-to('medium') {
+        width: 40vw;
+        height: 20vh;
+        padding: 2rem;
+    }
+    @include respond-to('large') {
+        width: 40vw;
+        height: 25vh;
+        padding: 4rem;
+    }
+    
+}
