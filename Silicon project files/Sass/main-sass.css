@@ -25,7 +25,7 @@
   --clr-text-body-600: var(--clr-gray-600);
   --clr-background: var(--clr-white);
   --clr-background-gray: var(--clr-gray-100);
-  --clr-dropdown: var(--clr-gray-300);
+  --clr-dropdown: var(--clr-gray-200);
   --clr-system-error: #EF4444;
   --clr-system-success: #22C55E;
   --clr-system-warning: #FFBA08;
@@ -38,6 +38,7 @@
   --clr-text-headlines: var(--clr-white);
   --clr-text-body: var(--clr-gray-500);
   --clr-text-body-600: var(--white);
+  --clr-dropdown: var(--clr-gray-880);
 }
 .darkmode .download-button {
   background-color: #EFF2FC;
@@ -109,7 +110,20 @@
     background-color: var(--clr-gray-880);
   }
 }
-
+.darkmode .dropdown-specialist-btn {
+  color: var(--clr-gray-900);
+  background-color: var(--clr-white);
+}
+.darkmode .dropdown-specialist-btn::after {
+  color: var(--clr-gray-900);
+}
+.darkmode #dropdown-form {
+  background-color: var(--clr-white);
+  color: var(--clr-gray-900);
+}
+.darkmode #dropdown-form.open {
+  max-height: 80vh;
+}
 /* --- TYPOGRAPHY --- */
 body {
   font-family: "Manrope", sans-serif;
@@ -1303,7 +1317,6 @@ nav {
   border: none;
   height: 50px;
   width: 50px;
-  position: relative;
 }
 .hamburger-menu i {
   font-size: 1.5rem;
@@ -1338,6 +1351,43 @@ nav {
 }
 .download-button .btn-pic-dark {
   display: none;
+}
+
+.dropdown-specialist-btn {
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: inherit;
+  font-family: inherit;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--clr-gray-400);
+  text-align: left;
+  color: var(--clr-text-headlines);
+  background-color: var(--clr-background);
+  position: relative;
+}
+.dropdown-specialist-btn::after {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f078";
+  font-size: 0.6rem;
+  color: var(--clr-text-headlines);
+  position: absolute;
+  right: 3%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 0.25rem;
+  transition: transform 0.3s ease;
+}
+.dropdown-specialist-btn.open {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+.dropdown-specialist-btn.open::after {
+  transform: translateY(-50%) rotate(180deg);
 }
 
 .toggle-switch-button .toggle-switch-label {
@@ -1917,25 +1967,68 @@ nav {
   color: var(--clr-system-error);
 }
 
-.hamburger-expanded {
+#hamburger-expanded {
+  top: 53.5px;
+  right: -16px;
   width: 50vw;
-  height: auto;
   background-color: var(--clr-dropdown);
-  border-radius: 0.5rem;
-  position: absolute;
-  top: 3.5rem;
-  right: 0;
 }
-.hamburger-expanded .dropdown-list {
+@media (min-width: 768px) {
+  #hamburger-expanded {
+    right: -38px;
+    width: 20vh;
+  }
+}
+#hamburger-expanded.open {
+  max-height: 40vh;
+}
+@media (min-width: 768px) {
+  #hamburger-expanded.open {
+    max-height: 30vh;
+  }
+}
+#hamburger-expanded .burger-item {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--clr-text-headlines);
+}
+
+.dropdown-wrapper {
+  position: relative;
+}
+.dropdown-wrapper .canExpand {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50vw;
+  border-radius: 0 0 0.5rem 0.5rem;
+  transition: max-height 0.3s ease;
+  max-height: 0;
+  overflow: hidden;
+  background-color: var(--clr-background);
+  box-shadow: 0 4px 4px 0 rgba(11, 15, 25, 0.25);
+}
+.dropdown-wrapper .canExpand.open {
+  max-height: 80vh;
+}
+.dropdown-wrapper .canExpand .dropdown-list {
   list-style: none;
   padding: 1rem;
   padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
 }
-.hamburger-expanded .dropdown-list .dropdown-item {
-  text-decoration: none;
-  font-size: 1rem;
-  color: var(--clr-headlines);
+
+#dropdown-form {
+  top: 36px;
+  right: 0;
+  width: 100%;
+  max-height: 0;
+  background-color: var(--clr-background);
+  transition: max-height 0.2s ease;
+}
+#dropdown-form.open {
+  max-height: 80vh;
 }/*# sourceMappingURL=main-sass.css.map */

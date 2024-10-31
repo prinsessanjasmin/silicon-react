@@ -5,6 +5,7 @@
     --clr-text-headlines: var(--clr-white);
     --clr-text-body: var(--clr-gray-500);
     --clr-text-body-600: var(--white);
+    --clr-dropdown: var(--clr-gray-880);
 
     
     .download-button {
@@ -112,6 +113,34 @@
             }  
         }
     }
+
+    .dropdown-specialist-btn {
+        color: var(--clr-gray-900);
+        background-color: var(--clr-white);
+    
+        &::after {
+            color: var(--clr-gray-900);
+        }
+    }
+
+    #dropdown-form { 
+        background-color: var(--clr-white);
+        color: var(--clr-gray-900);
+        
+        &.open {
+            max-height: 80vh;    
+    
+            @include respond-to('medium') {
+            }
+    
+            @include respond-to('large') {
+            }
+        }
+    }
+        
+            
+        
+    
 }
 
 

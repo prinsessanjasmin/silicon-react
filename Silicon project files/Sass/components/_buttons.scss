@@ -66,7 +66,6 @@
     border: none;
     height: 50px;
     width: 50px;
-    position: relative; 
     
     i {
         font-size: 1.5rem;
@@ -98,4 +97,38 @@
     .btn-pic-dark {
         display: none;
     }   
+}
+
+.dropdown-specialist-btn {
+    @include button;
+    font-size: inherit;
+    font-family: inherit;
+    width: 100%;
+    padding: .5rem;
+    border-radius: .5rem;
+    border: 1px solid var(--clr-gray-400);
+    text-align: left;
+    color: var(--clr-text-headlines);
+    background-color: var(--clr-background);
+    position: relative;
+
+    &::after {
+        @include font-awesome-icon("\f078");
+        font-size: .6rem;
+        color: var(--clr-text-headlines);
+        position: absolute;
+        right: 3%;
+        top: 50%;
+        transform: translate(-50%, -50%); 
+        transform-origin: 0.25rem;
+        transition: transform 0.3s ease; 
+    }
+
+    &.open {
+        border-radius: .5rem .5rem 0 0;
+
+        &::after {
+            transform: translateY(-50%) rotate(180deg); 
+        } 
+    }
 }

@@ -1,0 +1,23 @@
+
+#dropdown-form { 
+    top: 36px; 
+    right: 0;
+    width: 100%;
+    max-height: 0;  
+    background-color: var(--clr-background);
+    transition: max-height .2s ease; 
+    
+    &.open {
+        max-height: 80vh;    
+
+        @include respond-to('medium') {
+        }
+
+        @include respond-to('large') {
+        }
+    }
+}
+
+
+
+

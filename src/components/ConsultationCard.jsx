@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import DropdownMenu from './DropdownMenu';
 
 function ConsultationCard() {
     const [formData, setFormData] = useState({ fullName: '', email: '', specialist: '' }); 
@@ -20,6 +21,10 @@ function ConsultationCard() {
             }))
         }
     }
+
+    const handleDropdownSelect = (option) => {
+        setFormData({ ...formData, specialist: option });
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -81,20 +86,17 @@ function ConsultationCard() {
             </div>
             <div className="input-group">
                 <label htmlFor="specialist">Specialist</label>
-                <input onChange={handleInputChange} type="text" id="specialist" name='specialist' value={formData.specialist} ></input>
-                <p className='error-message-2'>{errors.specialist && errors.specialist}</p>
-            </div>
-            {/* <div className="input-group">
-                <label htmlFor="specialist">Specialist</label>
-                <select id="specialist" name='specialist'>
-                    <option value="">Select a speciality...</option>
-                    <option value="accounting">Accounting</option>
-                    <option value="web-programming">Web programming</option>
-                    <option value="back-end">Back-end</option>
-                    <option value="web-design">Web design</option>
-                    <option value="other">Other</option>
-                </select>
-            </div> */}
+                <DropdownMenu 
+                    buttonClassName='dropdown-specialist-btn'
+                    trigger={formData.specialist || 'Choose a speciality...'}
+                    openClasses='canExpand open'
+                    closedClasses='canExpand'
+                    id='dropdown-form'
+                    options={['Accounting', 'Web programming', 'Back-end', 'Web design', 'Other']}
+                    onSelect={handleDropdownSelect}
+                />
+                {/* <p className='error-message-2'>{errors.specialist && errors.specialist}</p> */}
+            </div> 
             <button className="button" type="submit">Make an appointment</button>
         </form>
     </div>
