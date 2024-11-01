@@ -14,7 +14,7 @@ function NavList() {
         </li>
         <DarkmodeSwitch />
         <li className="nav-list-item" id="signin-btn-li">
-            <Link to="/signin" className="button" id="signin-button">
+            <Link to="/register" className="button" id="signin-button">
                 <i className="fa-regular fa-user"></i>
                 <span>Sign in / up</span>
             </Link> 

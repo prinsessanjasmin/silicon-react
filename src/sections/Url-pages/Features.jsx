@@ -5,6 +5,7 @@ import Page2AppFeatures from '../Page2Appfeatures'
 function Features() {
   return (
     <>
+      <Breadcrumb />
       <Page2AppFeatures />
     </>
     

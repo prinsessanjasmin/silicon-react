@@ -23,7 +23,7 @@ function HamburgerMenu() {
             <NavLink to="/" className='burger-item' id="">Home</NavLink>,
             <NavLink to="/features" className='burger-item' id="">Features</NavLink>,
             <NavLink to="/contact" className='burger-item' id="">Contact</NavLink>,
-            <NavLink to="/signin" className='burger-item' >Sign in / up</NavLink>
+            <NavLink to="/register" className='burger-item' >Sign in / up</NavLink>
           ]}
           onSelect={handleClick}
         />

@@ -37,7 +37,7 @@
   --clr-background-gray: var(--clr-gray-890);
   --clr-text-headlines: var(--clr-white);
   --clr-text-body: var(--clr-gray-500);
-  --clr-text-body-600: var(--white);
+  --clr-text-body-600: var(--clr-white);
   --clr-dropdown: var(--clr-gray-880);
 }
 .darkmode .download-button {
@@ -2031,4 +2031,49 @@ nav {
 }
 #dropdown-form.open {
   max-height: 80vh;
+}
+.breadcrumb {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 1rem;
+  align-items: center;
+  padding-block: 2rem;
+}
+.breadcrumb .home-link {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  text-decoration: none;
+  align-items: center;
+  font-size: 0.8rem;
+}
+.breadcrumb .home-link i {
+  color: var(--clr-text-body-600);
+}
+.breadcrumb .home-link p {
+  font-size: 0.8rem;
+  color: var(--clr-text-body-600);
+}
+.breadcrumb .breadcrumb-link {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  text-decoration: none;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--clr-text-body-600);
+}
+.breadcrumb .breadcrumb-link::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f101";
+  font-size: 0.7rem;
+  align-items: center;
+}
+.breadcrumb .breadcrumb-link .active {
+  color: var(--clr-primary);
+}
+.breadcrumb .last-breadcrumb {
+  color: var(--clr-primary);
 }/*# sourceMappingURL=main-sass.css.map */
