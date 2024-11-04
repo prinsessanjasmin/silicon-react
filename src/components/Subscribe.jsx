@@ -1,46 +1,28 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-
+import validateForm from '../assets/JS-files/validateForm'
+import { emailPattern } from '../assets/JS-files/regexPatterns'
 
 function Subscribe() {
     const [formData, setFormData] = useState({
         email: ''
     }); 
-
     const [submitted, setSubmitted] = useState(false);
-
-    const [errors, setErrors] = useState({})
+    const [isValid, setIsValid] = useState(true);
 
     const handleInputChange = (e) => {
         const {id, value } = e.target;
         setFormData({...formData, [id]: value});
-
-        if (value.trim() === '') {
-            setErrors(prevErrors => ({
-                ...prevErrors, [id]: 'You need to submit an email address'
-            }))
-        } else {
-            setErrors(prevErrors => ({
-                ...prevErrors, [id]: ''
-            }))
-        }
     }
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const newErrors = {}
-        Object.keys(formData).forEach(field => {
-            if (formData[field].trim() === '') {
-                newErrors[field] = 'You need to submit an email address';
-            }
-        })
-
-        if (Object.keys(newErrors).length > 0) {
-            setErrors(newErrors);
-            return
+        if (validateForm(formData.email, emailPattern)) {
+            setIsValid(true);
+          } else {
+            setIsValid(false);
         }
-
 
         const res = await axios.post('https://win24-assignment.azurewebsites.net/api/forms/subscribe', formData);
 
@@ -53,8 +35,6 @@ function Subscribe() {
             console.log(res);
             console.log (formData);
         }
-
-
     }
 
     if (submitted) {
@@ -82,7 +62,7 @@ function Subscribe() {
             <form id="input-div" noValidate onSubmit={handleSubmit}>
                 <div>
                     <input onChange={handleInputChange} id="email" type="email" value={ formData.email } placeholder="  &#9993;  Your email" ></input>
-                    <p className='error-message'>{errors.email && errors.email}</p>
+                    {isValid ? (<p></p>) : (<p className="error-message">Please enter a valid email adress.</p>)}
                 </div>
                 <button className="button" id="sub-btn">Subscribe</button>
             </form>
@@ -91,4 +71,4 @@ function Subscribe() {
   )
 }
 
-export default Subscribe
+export default Subscribe;
