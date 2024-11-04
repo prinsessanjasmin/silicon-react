@@ -1,15 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useContext } from 'react'
 import Faq from './Faq'
+import { SiliconContext } from '../contexts/SiliconContext'
 
 function FaqAccordion() {
-  const [faq, setFaq] = useState(); 
-
-  useEffect(() => {
-    fetch('https://win24-assignment.azurewebsites.net/api/faq')
-      .then(response => response.json())
-      .then(json => setFaq(json))
-      .catch(error => console.error(error));
-  }, []);
+  
+  const { faq } = useContext(SiliconContext);
+  
 
   return (
     <div className="collapse-faq">

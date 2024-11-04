@@ -1,17 +1,12 @@
-import React, { useEffect, useState }  from 'react'
+import React, { useContext }  from 'react'
 import ReviewCards from './ReviewCards'
+import { SiliconContext } from '../contexts/SiliconContext'
 
 
 function Reviews() {
-  const [testimonials, setTestimonials] = useState(); 
-
-  useEffect(() => {
-    fetch('https://win24-assignment.azurewebsites.net/api/testimonials')
-      .then(response => response.json())
-      .then(json => setTestimonials(json))
-      .catch(error => console.error(error));
-  }, []);
-
+  
+  const { testimonials } = useContext(SiliconContext);
+  
   return (
     <>
         <div id="p-5-text">
@@ -33,3 +28,12 @@ function Reviews() {
 }
 
 export default Reviews
+
+  // const [testimonials, setTestimonials] = useState(); 
+
+  // useEffect(() => {
+  //   fetch('https://win24-assignment.azurewebsites.net/api/testimonials')
+  //     .then(response => response.json())
+  //     .then(json => setTestimonials(json))
+  //     .catch(error => console.error(error));
+  // }, []);

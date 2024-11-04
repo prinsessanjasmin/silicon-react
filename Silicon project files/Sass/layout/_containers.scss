@@ -2,6 +2,7 @@
   width: 100%;
   padding-inline: 1rem;
   margin: auto;
+  background-color: transparent;
 
   @include respond-to('medium') {
     max-width: 720px;

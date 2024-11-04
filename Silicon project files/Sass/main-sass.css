@@ -217,6 +217,7 @@ span {
   width: 100%;
   padding-inline: 1rem;
   margin: auto;
+  background-color: transparent;
 }
 @media (min-width: 768px) {
   .container {
@@ -375,6 +376,12 @@ nav {
 .footer {
   font-size: 0.9rem;
   color: var(--clr-gray-600);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
 }
 
 #page-1 {
@@ -590,7 +597,7 @@ nav {
 }
 
 #page-2 {
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 @media (min-width: 1200px) {
@@ -1914,26 +1921,6 @@ nav {
   position: absolute;
 }
 
-.page-nav {
-  display: flex;
-  width: auto;
-  gap: 0.5rem;
-  align-items: center;
-  padding-block: 2rem;
-}
-.page-nav a, .page-nav i {
-  text-decoration: none;
-  color: var(--clr-text-body-600);
-  font-size: 0.8rem;
-}
-.page-nav i {
-  padding: 0.3rem;
-  font-size: 0.6rem;
-}
-.page-nav .active {
-  color: var(--clr-primary);
-}
-
 .error-message {
   position: absolute;
   color: var(--clr-system-error);
@@ -2032,15 +2019,18 @@ nav {
 #dropdown-form.open {
   max-height: 80vh;
 }
-.breadcrumb {
+.breadcrumb-container {
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+}
+.breadcrumb-container .breadcrumb {
   display: flex;
   flex-direction: row;
   list-style: none;
   gap: 1rem;
   align-items: center;
-  padding-block: 2rem;
 }
-.breadcrumb .home-link {
+.breadcrumb-container .breadcrumb .home-link {
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
@@ -2048,14 +2038,14 @@ nav {
   align-items: center;
   font-size: 0.8rem;
 }
-.breadcrumb .home-link i {
+.breadcrumb-container .breadcrumb .home-link i {
   color: var(--clr-text-body-600);
 }
-.breadcrumb .home-link p {
+.breadcrumb-container .breadcrumb .home-link p {
   font-size: 0.8rem;
   color: var(--clr-text-body-600);
 }
-.breadcrumb .breadcrumb-link {
+.breadcrumb-container .breadcrumb .breadcrumb-link {
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
@@ -2064,16 +2054,13 @@ nav {
   font-size: 0.8rem;
   color: var(--clr-text-body-600);
 }
-.breadcrumb .breadcrumb-link::before {
+.breadcrumb-container .breadcrumb .breadcrumb-link::before {
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   content: "\f101";
   font-size: 0.7rem;
   align-items: center;
 }
-.breadcrumb .breadcrumb-link .active {
-  color: var(--clr-primary);
-}
-.breadcrumb .last-breadcrumb {
+.breadcrumb-container .breadcrumb .breadcrumb-link .active {
   color: var(--clr-primary);
 }/*# sourceMappingURL=main-sass.css.map */

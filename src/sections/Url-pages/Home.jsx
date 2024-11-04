@@ -9,12 +9,12 @@ import Page6Faq from '../Page6Faq'
 function Home() {
   return (
     <>
-        <Page1Hero />
-        <Page2AppFeatures />
-        <Page3HowDoesItWork />
-        <Page4Examples />
-        <Page5Reviews />
-        <Page6Faq />
+      <Page1Hero />
+      <Page2AppFeatures />
+      <Page3HowDoesItWork />
+      <Page4Examples />
+      <Page5Reviews />
+      <Page6Faq />
     </>
   )
 }
