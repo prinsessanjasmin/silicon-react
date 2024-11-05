@@ -8,6 +8,7 @@ import Footer from './components/Footer'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import SignInSignUp from './sections/Url-pages/SignInSignUp'
 import SiliconProvider from './contexts/SiliconContext'
+import ScrollToTop from './components/ScrollToTop'
 
 
 function App() {
@@ -18,12 +19,13 @@ function App() {
         <div className="wrapper" id="wrapper" > 
           <Navigation />
           <main>
-            <Routes>
-              <Route path="/" element={<Home/>} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/features" element={<Features />} />
-              <Route path="/register" element={<SignInSignUp />} />
-            </Routes>
+            <ScrollToTop />
+              <Routes>
+                <Route path="/" element={<Home/>} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/features" element={<Features />} />
+                <Route path="/register" element={<SignInSignUp />} />
+              </Routes>
           </main>
           <Footer />
         </div>

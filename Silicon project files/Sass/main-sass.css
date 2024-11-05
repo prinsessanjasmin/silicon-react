@@ -1059,6 +1059,7 @@ nav {
 @media (min-width: 1200px) {
   #contact-page-1 #p-contact-1 {
     margin: auto;
+    gap: 8rem;
   }
 }
 @media (min-width: 768px) {

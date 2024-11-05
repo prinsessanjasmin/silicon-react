@@ -26,6 +26,7 @@
 
         @include respond-to('large') {
             margin: auto;
+            gap: 8rem;
         }
 
         .contact-us {
