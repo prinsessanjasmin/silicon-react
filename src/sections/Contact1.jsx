@@ -6,8 +6,8 @@ import Breadcrumb from '../components/Breadcrumb'
 function Contact1() {
   return (
     <section id="contact-page-1" aria-label="contact-page">
+      <Breadcrumb />
         <div className="container" id="p-contact-1">
-            <Breadcrumb />
             <ContactUs />
             <ConsultationCard />
         </div> 

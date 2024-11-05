@@ -11,7 +11,6 @@ function ConsultationCard() {
     const [isFullNameValid, setIsFullNameValid] = useState(true);
     const [isEmailValid, setIsEmailValid] = useState(true);
     const [isSpecialistValid, setIsSpecialistValid] = useState(true);
-    const [readyToSubmit, setReadyToSubmit] = useState(false);
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -37,45 +36,46 @@ function ConsultationCard() {
         e.preventDefault();
         setIsFirstAttempt(false);
 
-        setIsFullNameValid(validateForm(formData.fullName, fullNamePattern));
-        setIsEmailValid(validateForm(formData.email, emailPattern));
-        setIsSpecialistValid(formData.specialist !== 'Choose a speciality...');
+        const errors = {};
 
-        if (isFullNameValid && isEmailValid && isSpecialistValid) {
-            setReadyToSubmit(true);
-        }
+        errors.fullName = validateForm(formData.fullName, fullNamePattern);
+        errors.email = validateForm(formData.email, emailPattern);
+        errors.special = formData.specialist !== 'Choose a speciality...';
+
+        setIsFullNameValid(errors.fullName);
+        setIsEmailValid(errors.email);
+        setIsSpecialistValid(errors.special);
+
+        if(Object.values(errors).includes(false)) {
+            console.log('error')
+            return;
+        };
+
+        const submitForm = async () => {
+            try {
+                const res = await axios.post('https://win24-assignment.azurewebsites.net/api/forms/contact', formData);
+
+                if (res.status === 200) {
+                    console.log(res.data);
+                    console.log(res);
+                    console.log (formData);
+                    setSubmitted(true);
+                    setFormData({ fullName: '', email: '', specialist: '' });
+                }
+                else {
+                    console.error('An error occurred:', errors);
+                }
+            } catch (error) {
+                console.error('An error occurred:', errors);
+            } 
+        };
+        submitForm()
+    }
+    
+    const handleOk = () => {
+        setSubmitted(false);
     }
 
-    useEffect(() => {
-        if (readyToSubmit && isFullNameValid && isEmailValid && isSpecialistValid) {
-            const submitForm = async () => {
-                try {
-                    const res = await axios.post('https://win24-assignment.azurewebsites.net/api/forms/contact', formData);
-
-                    if (res.status === 200) {
-                        console.log(res.data);
-                        console.log(res);
-                        console.log (formData);
-                        setSubmitted(true);
-                        setFormData({ fullName: '', email: '', specialist: '' });
-                    }
-                    else {
-                        console.error('An error occurred:', error);
-                    }
-                } catch (error) {
-                    console.error('An error occurred:', error);
-                } 
-                // finally {
-                //     // Reset `readyToSubmit` after attempting to submit
-                //     setReadyToSubmit(false);
-                // }
-            };
-        } else {
-            // Reset `readyToSubmit` if validation fails
-            console.log(readyToSubmit, isFullNameValid, isEmailValid, isSpecialistValid)
-        }
-    }, [readyToSubmit, isFullNameValid, isEmailValid, isSpecialistValid]);     
-    
     if (submitted) {
         return (
             <div className="consultation-card submitted-message" id="consultation-card">
@@ -83,10 +83,6 @@ function ConsultationCard() {
                 <button className="button" onClick={ handleOk }>Got it!</button>
             </div>
         )
-    }
-
-    const handleOk = () => {
-        setSubmitted(false);
     }
 
   return (
@@ -114,7 +110,7 @@ function ConsultationCard() {
                     options={['Accounting', 'Web programming', 'Back-end', 'Web design', 'Other']}
                     onSelect={handleDropdownSelect}
                 />
-                {isSpecialistValid ? (<p></p>) : (<p className="error-message-2">Please choose a speciality from the list.</p>)}
+                {isSpecialistValid ? (<p></p>) : (<p className="error-message-2">Please choose a speciality.</p>)}
             </div> 
             <button className="button" type="submit">Make an appointment</button>
         </form>

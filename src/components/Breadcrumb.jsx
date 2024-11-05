@@ -10,7 +10,7 @@ const Breadcrumb = () => {
 
     return (
         <section>
-            <div className="breadcrumb-container">
+            <div className="breadcrumb-container container">
                 {/* <h1>{pathnames[pathnames.length - 1]?.replace(/-/g, ' ') || 'Home'}</h1> */}
                 <ul className='breadcrumb'>
                     <li ><Link to='/' className='home-link'>

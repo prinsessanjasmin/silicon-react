@@ -8,13 +8,14 @@
     right: 5rem;
 
     @include respond-to('medium') {
-        width: 40vw;
-        height: 50vh;
+        width: 80%;
+        height: 56vh;
         padding: 2rem;
+        margin-bottom: 2rem; 
+        margin-right: 1rem;
     }
     @include respond-to('large') {
-        width: 40vw;
-        height: 75vh;
+        
         padding: 4rem;
     }
 
@@ -46,32 +47,9 @@
             }
         }
 
-        select {
-            appearance: none;
-            -webkit-appearance: none; /* Safari */
-            -moz-appearance: none; /* Firefox */
-            font-size: inherit;
-            font-family: inherit;
-            padding: .5rem;
-            border-radius: .5rem;
-            border: 1px solid var(--clr-gray-400);
-
-            
-            background-image: url("/Icons/chevron-down-silicon.svg");
-            background-repeat: no-repeat;
-            background-position: right 10px center;
-            background-size: 1.5rem;
-            
-
-            &:hover,
-            &:active {
-                border: none;
-                box-shadow: 0 4px 4px 0 rgba(11, 15, 25, 0.25);
-            }
-        }
-
         .button {
-            margin-block: 2rem;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
             width: 100%;
         }
     }

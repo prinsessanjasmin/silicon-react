@@ -3,7 +3,7 @@ import React from 'react'
 function ContactUs() {
   return (
     <div className="contact-us">
-        <h1>Contact Us</h1>
+        <h2>Contact Us</h2>
         <div className="contact-info-div" id="contact-info">
             <div className="contact-option">
                 <div className="icon-holder">
