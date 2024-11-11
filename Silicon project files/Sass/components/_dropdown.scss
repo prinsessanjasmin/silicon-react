@@ -12,9 +12,10 @@
         overflow: hidden;   
         background-color: var(--clr-background);
         box-shadow: 0 4px 4px 0 rgba(11, 15, 25, 0.25);
+        z-index: 1;
 
         &.open {
-            max-height: 80vh;    
+            max-height: 100vh;    
     
             @include respond-to('medium') {
             }
