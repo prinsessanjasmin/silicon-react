@@ -1,6 +1,6 @@
 import React from 'react'
 import Page1Hero from '../Page1Hero'
-import Page2AppFeatures from '../Page2Appfeatures'
+import Page2AppFeatures from '../Page2AppFeatures'
 import Page3HowDoesItWork from '../Page3HowDoesItWork'
 import Page4Examples from '../Page4Examples'
 import Page5Reviews from '../Page5Reviews'

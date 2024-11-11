@@ -13,7 +13,7 @@ function Page1Hero() {
               <AppleBtn />
               <GoogleBtn />
               <div id="discover">
-                  <a href="#page-2" className="down-btn" type="button"></a>
+                  <a href="#page-2" className="down-btn" aria-label='button pointing down' type="button"></a>
                   <span id="discover-more">Discover more</span>
                   <div className="sr-only">Click to go straight to App features!</div>
               </div>
